@@ -1,4 +1,3 @@
-
 # Copyright (C) 2020 by Team Devcode(Ayan Ansari, Adnan Ahmad) < https://github.com/DevcodeOfficial >.
 #
 # This file is part of project < https://github.com/DevcodeOfficial/UserByte > 
