@@ -1,3 +1,11 @@
+# Copyright (C) 2020 by Team Devcode(Ayan Ansari, Adnan Ahmad) < https://github.com/DevcodeOfficial >.
+#
+# This file is part of project < https://github.com/DevcodeOfficial/UserByte > 
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/DevcodeOfficial/UserByte/blob/master/LICENSE >
+#
+# All rights reserved.
+
 import sys, importlib, asyncio
 
 from userbyte import __version__, byte, logger
