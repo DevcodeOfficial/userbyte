@@ -1,0 +1,40 @@
+{
+  "name": "UserByte",
+  "description": "PyroGram Created By Team Devcode",
+  "logo": "https://ibb.co/Y7JzkSK",
+  "keywords": [
+    "telegram-userbot",
+    "pyrogram",
+    "userbot",
+    "pyrogram-userbot",
+    "devcode"
+  ],
+  "repository": "https://github.com/DevcodeOfficial/UserByte",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "ALIVE_NAME": {
+      "description": "Enter Your Username",
+      "value": ""
+    },
+    "STRING_SESSION": {
+      "description": "Generate this value by running python3 generatesession.py locally",
+      "value": ""
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "Add @MissRose_bot to a new group and type /id to get this value",
+      "value": ""
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }]
+}
