@@ -16,13 +16,14 @@ async def who_is(byte, message):
         return
     if from_user is not None:
         result = "<b>User Info (Fetched By Userbyte):</b>\n\n"
-        result += f"🅰 First Name: <a href='tg://user?id={from_user.id}'>{from_user.first_name}</a>\n"
-        result += f"🅱 Last Name: {from_user.last_name}\n"
+        result += f"<b>🅰 First Name:</b> <code>{from_user.first_name}</code>\n"
+        result += f"<b>🅱 Last Name:</b> <code>{from_user.last_name}</code>\n"
         result += f"🕵‍♂ Username: @{from_user.username}\n"
+        result += f"<b>📝 Bio:</b> <code>{from_user.description}</code>\n\n"
         result += f"🤖 Is Bot: {from_user.is_bot}\n"
         result += f"✔️ Is Verified: {from_user.is_verified}\n"
         result += f"👁‍🗨 Last Seen: {from_user.status}\n"
-        result += "🔗 Permanent Link To Profile: "
+        result += "<b>🔗 Permanent Link To Profile:</b> "
         result += f"<a href='tg://user?id={from_user.id}'>{from_user.first_name}</a>"
         
         if from_user.photo:
@@ -35,6 +36,6 @@ async def who_is(byte, message):
             disable_notification=True
             )
             os.remove(local_user_photo)
-            await loading_msg.delete()
+            await message.delete()
         else:
-        	await loading_msg.edit(result)
+        	await message.edit(result)
