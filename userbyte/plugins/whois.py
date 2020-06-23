@@ -19,7 +19,6 @@ async def who_is(byte, message):
         result += f"<b>🅰 First Name:</b> <code>{from_user.first_name}</code>\n"
         result += f"<b>🅱 Last Name:</b> <code>{from_user.last_name}</code>\n"
         result += f"🕵‍♂ Username: @{from_user.username}\n"
-        result += f"<b>📝 Bio:</b> <code>{from_user.description}</code>\n\n"
         result += f"🤖 Is Bot: {from_user.is_bot}\n"
         result += f"✔️ Is Verified: {from_user.is_verified}\n"
         result += f"👁‍🗨 Last Seen: {from_user.status}\n"
