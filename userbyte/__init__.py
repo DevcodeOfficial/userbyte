@@ -16,6 +16,6 @@ __copyright__ = f"Pyrouserbot v{__version__} Copyright (c) 2020 {__author__}"
 
 byte = Client(STRING_SESSION, api_id=API_ID, api_hash=API_HASH)
 
-LOGGER_GROUP = LGROUP
+LOGGER_GROUP = PRIVATE_GROUP_ID
 LOG = True
 cmd = [".","!","#","$"]
