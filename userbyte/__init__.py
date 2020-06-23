@@ -2,7 +2,7 @@ import os, sys, logging, importlib, asyncio
 from pathlib import Path
 from datetime import datetime
 from pyrogram import Client, Filters
-from userbyte.config import STRING_SESSION, API_ID, API_HASH, LGROUP
+from userbyte.config import STRING_SESSION, API_ID, API_HASH, PRIVATE_GROUP_ID
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO)
