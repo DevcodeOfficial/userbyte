@@ -51,3 +51,4 @@ async def who_is(byte, message):
                 parse_mode="html",
                 disable_notification=True
                 )
+                await message.delete()
