@@ -6,8 +6,7 @@
 #
 # All rights reserved.
 
-"""Get info about the replied user
-Syntax: .whois"""
+pp = "userbyte/images/pp.jpg"
 
 from userbyte import byte, cmd
 from pyrogram import Filters, Message
@@ -45,4 +44,10 @@ async def who_is(byte, message):
             os.remove(local_user_photo)
             await message.delete()
         else:
-        	await message.edit(result)
+        	await byte.send_photo(
+                chat_id=message.chat.id,
+                photo=pp,
+                caption=result,
+                parse_mode="html",
+                disable_notification=True
+                )
