@@ -7,8 +7,8 @@ from userbyte.helpers.welcome_msg import wlcm_msg
 async def wlcm(byte, message):
   file = "userbyte/helpers/welcome_msg.py"
   input_str = message.command[1]
+  os.remove(file)
   file = open(f"{file}", "w")
   file.write(f"wlcm_msg = {input_str}")
   file.close()
   await message.edit({wlcm_msg})
-  os.remove(file)
