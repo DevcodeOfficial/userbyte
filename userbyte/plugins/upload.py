@@ -10,7 +10,7 @@ import pyrogram, time, os
 from pyrogram import Client, Filters
 from pyrogram.api import functions
 from userbyte import byte, cmd
-from userbyte.helpers.dl_loading import progress_for_pyrogram
+from userbyte.helpers.loader import progress_for_pyrogram
 timesleep = 1
 from datetime import datetime
 thumb_image_path = "./DOWNLOADS/thumb.jpg"
