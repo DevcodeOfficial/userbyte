@@ -12,15 +12,19 @@ from pyrogram import Client, Filters
 from datetime import datetime
 DOWNLOAD_LOCATION= "./DOWNLOADS/"
 from userbyte import byte, cmd
-from userbyte.helpers.dl_loading import progress_for_pyrogram, humanbytes
+from userbyte.helpers.loader import progress_for_pyrogram, humanbytes
 
 @byte.on_message(Filters.command(["download"], cmd) & Filters.me)
 async def download_telegram(client, message):
       mone = await message.edit("Processing ...") # Reply
       url = message.text[10:]
+      file_name = message.text[10:]
+      DOWNLOAD_LOCATION= "./DOWNLOADS/"
       if message.reply_to_message:
          start = datetime.now()
          c_time = time.time()
+         if file_name != "":
+            DOWNLOAD_LOCATION = DOWNLOAD_LOCATION+file_name
          try:
              downloaded_file_name = await message.reply_to_message.download(
                                     file_name=DOWNLOAD_LOCATION,
@@ -37,8 +41,8 @@ async def download_telegram(client, message):
              end = datetime.now()
              ms = (end - start).seconds
              await mone.edit("Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms))
-             # time.sleep(100000)
-             # await mone.delete()
+
+
       
       elif url:
            start = datetime.now()
