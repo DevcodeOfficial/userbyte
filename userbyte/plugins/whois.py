@@ -44,6 +44,7 @@ async def who_is(byte, message):
             os.remove(local_user_photo)
             await message.delete()
         else:
+                await message.delete()
         	await byte.send_photo(
                 chat_id=message.chat.id,
                 photo=pp,
@@ -51,4 +52,3 @@ async def who_is(byte, message):
                 parse_mode="html",
                 disable_notification=True
                 )
-                await message.delete()
