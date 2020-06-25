@@ -9,7 +9,7 @@ async def wlcm(byte, message):
   input_str = message.command[1]
   os.remove(file)
   file = open(f"{file}", "w")
-  file.write(f"wlcm_msg = {input_str}")
+  file.write(f"wlcm_msg = '{input_str}'")
   file.close()
   from userbyte.helpers.welcome_msg import wlcm_msg
   await message.edit(wlcm_msg)
