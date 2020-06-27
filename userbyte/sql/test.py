@@ -8,13 +8,11 @@ from userbyte.sql import SESSION, BASE
 class Notes(BASE):
     __tablename__ = "notes"
     chat_id = Column(String(14), primary_key=True)
-    name = Column(UnicodeText, primary_key=True)
-    d_message_id = Column(Integer)
+    name = Column(UnicodeText)
 
-    def __init__(self, chat_id, name, d_message_id):
+    def __init__(self, chat_id, name):
         self.chat_id = str(chat_id)  # ensure string
         self.name = name
-        self.d_message_id = d_message_id
 
     def __repr__(self):
         return "<Note %s>" % self.name
@@ -25,18 +23,18 @@ Notes.__table__.create(checkfirst=True)
 NOTES_INSERTION_LOCK = threading.RLock()
 
 
-def add_note_to_db(chat_id, note_name, note_message_id):
+def add_note_to_db(chat_id, note_name):
     with NOTES_INSERTION_LOCK:
-        prev = SESSION.query(Notes).get((str(chat_id), note_name))
+        prev = SESSION.query(Notes).get((str(chat_id)))
         if prev:
             SESSION.delete(prev)
-        note = Notes(str(chat_id), note_name, note_message_id)
+        note = Notes(str(chat_id), note_name)
         SESSION.add(note)
         SESSION.commit()
 
 
-def get_note(chat_id, note_name):
+def get_note(chat_id):
     try:
-        return SESSION.query(Notes).get((str(chat_id), note_name))
+        return SESSION.query(Notes).get((str(chat_id)))
     finally:
         SESSION.close()
