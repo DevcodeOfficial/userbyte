@@ -5,3 +5,4 @@ asyncio
 aiohttp
 pySmartDL
 bs4
+sqlalchemy
