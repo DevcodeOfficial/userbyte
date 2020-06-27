@@ -9,7 +9,7 @@
 # Special Thanks to Spechide
 import os
 from pyrogram import Client, Filters, InlineKeyboardMarkup, InlineKeyboardButton
-from userbyte import logger, cmd
+from userbyte import logger, cmd, byte
 from userbyte.config import DB_URI
 import userbyte.sql.notes as sql
 from userbyte.helpers.msg_types import get_file_id, get_note_type, Types
