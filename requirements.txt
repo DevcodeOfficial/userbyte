@@ -4,5 +4,6 @@ tgcrypto
 asyncio
 aiohttp
 pySmartDL
+psycopg2-binary
 bs4
 sqlalchemy
