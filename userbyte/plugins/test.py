@@ -1,4 +1,6 @@
-import userbyte.sql.test as sql
+import pyrogram
+Import userbyte.sql.test as sql
+from pyrogram import Filters
 from userbyte import byte, cmd
 
 @byte.on_message(Filters.command("test", cmd))
