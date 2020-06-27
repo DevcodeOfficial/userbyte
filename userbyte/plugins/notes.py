@@ -38,7 +38,7 @@ async def save_note(client, message):
             note_name,
             note_message_id
         )
-        await message.edit(f"✅ Note **{note_name** Saved")
+        await message.edit(f"✅ Note **{note_name}** Saved")
     else:
         note_name, text, data_type, content, buttons = get_note_type(message)
 
