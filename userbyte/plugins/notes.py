@@ -24,7 +24,7 @@ MAX_MESSAGE_LENGTH = 4096
 async def save_note(client, message):
     if not await is_admin:
         return
-    await message.edit("`🛠 Saving Note...`)
+    await message.edit("`🛠 Saving Note...`")
     if message.reply_to_message and message.reply_to_message.reply_markup is not None:
         fwded_mesg = await message.reply_to_message.forward(
             chat_id=TG_URI,
