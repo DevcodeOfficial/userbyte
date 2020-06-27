@@ -85,7 +85,7 @@ async def save_note(client, message):
                 note_name,
                 note_message_id
             )
-            await message.edit(f"✅ Note **{note_name** Saved")
+            await message.edit(f"✅ Note **{note_name}** Saved")
         else:
             await message.edit("🥺 This Might Be An Error")
             
