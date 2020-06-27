@@ -1,2 +1,0 @@
-
-wlcm_msg = "TEXT"
