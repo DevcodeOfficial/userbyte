@@ -7,4 +7,4 @@ async def save_note(client, message):
 	sql.add_note_to_db(msg)
 	await message.edit("message savd to db")
 	result = sql.get_note(msg)
-	await message.edit()
+	await message.edit(result)
