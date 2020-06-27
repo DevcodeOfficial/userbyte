@@ -21,7 +21,7 @@ MAX_MESSAGE_LENGTH = 4096
 
 @byte.on_message(Filters.command("savenote", cmd))
 async def save_note(client, message):
-    if not await is_admin:
+    if not is_admin:
         return
     await message.edit("`🛠 Saving Note...`")
     if message.reply_to_message and message.reply_to_message.reply_markup is not None:
@@ -91,7 +91,7 @@ async def save_note(client, message):
             
 @byte.on_message(Filters.command("clear", cmd))
 async def clear_note(_, message):
-    if not await is_admin:
+    if not is_admin:
     	return
     await message.edit("`🚫 Processing...`")
     note_name = " ".join(message.command[1:])
