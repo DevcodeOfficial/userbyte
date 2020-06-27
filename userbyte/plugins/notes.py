@@ -13,7 +13,6 @@ from userbyte import logger, cmd
 from userbyte.config import DB_URI
 import userbyte.sql.notes as sql
 from userbyte.helpers.msg_types import get_file_id, get_note_type, Types
-from pyrobot.helper_functions.admin_check import AdminCheck
 from userbyte.helpers.admin import is_admin
 
 TG_URI = os.environ.get("TG_URI", "-100")
