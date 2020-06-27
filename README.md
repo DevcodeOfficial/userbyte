@@ -2,7 +2,7 @@
 >**Userbyte** is a Simple and Easy to use Telegram Userbot Written in Python with [Pyrogram](https://github.com/pyrogram/pyrogram) and [PickleDB](https://github.com/patx/pickledb).
 
 ### Deploy ⬆️
-[![Deploy](https://telegra.ph/file/c86cf98eb752c398a36c7.png)](https://heroku.com/deploy?template=https://github.com/TechnoAyanOfficial/UserByte)
+[![Deploy](https://telegra.ph/file/c86cf98eb752c398a36c7.png)](https://heroku.com/deploy)
 
 ### Plugin Example 💾💿
 ```python
