@@ -6,7 +6,7 @@ from userbyte import byte, cmd
 async def updater(byte, message):
   
   await message.edit("`Checking for updates, please wait....`")
-  
+  repo = Repo()
   off_repo = 'https://github.com/Devcodeofficial/Userbyte.git'
   branch = repo.active_branch.name
   repo.create_remote('upstream', off_repo)
