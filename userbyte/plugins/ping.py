@@ -8,8 +8,10 @@
 
 import pyrogram
 from pyrogram import Filters
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
 from datetime import datetime
+
+set_help('ping', '📲 **Check ping of your UserByte\n\n👉 Command :** `.ping`')
 
 @byte.on_message(Filters.command('ping', cmd) & Filters.me)
 async def piiing(byte, message):
