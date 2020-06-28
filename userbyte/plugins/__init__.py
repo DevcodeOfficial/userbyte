@@ -34,8 +34,8 @@ async def _alive(byte, message):
 		await message.edit("**🤖🔥 UserByte Helper\n\n😊 Syntax :** `.help plugin name` **to know about a single plugin\n\nAvailable Plugins :** `{}`".format("`  **>**  `".join(ALL_MODULES)))
 	else:
 		input = message.command[1]
-		result = get_help(input)
+		result = get_help(input.lower())
 		if result:
 			await message.edit(f"{result}")
 		else:
-			await message.edit(f"😐 Invalid Plugin Name")
+			await message.edit(f"😐 No Help Found For : **{input}**")
