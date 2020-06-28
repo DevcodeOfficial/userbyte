@@ -7,5 +7,5 @@ from userbyte import byte, cmd
 async def peste(byte, message):
 	replied = message.reply_to_message
 	if replied.document:
-		text = download_media(replied.document)
+		text = await byte.download_media(replied.document)
 		await byte.send_document(text)
