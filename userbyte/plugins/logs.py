@@ -12,5 +12,5 @@ async def looogs(byte, message):
 	
 	with open('userbyte_logs.txt', 'w') as log:
 		log.write(app.get_log())
-		await byte.send_document(chat_id=message.chat.id, document='userbyte_logs.text', caption='😁 Here Is Your Logs File')
+		await byte.send_document(chat_id=message.chat.id, document='userbyte_logs.txt', caption='😁 Here Is Your Logs File')
 		await message.delete()
