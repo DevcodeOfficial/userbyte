@@ -1,8 +1,9 @@
 import pyrogram, os , requests, heroku3
 from pyrogram import Filters
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
 from userbyte.config import HEROKU_APP_NAME, HEROKU_API_KEY
 
+set_help('logs', '😊 **Get Userbyte Logs \n\n👉 Command :** `.logs`')
 @byte.on_message(Filters.command('logs', cmd) & Filters.me)
 async def looogs(byte, message):
 	await message.edit('`🤟 Fetching Logs.....`')
