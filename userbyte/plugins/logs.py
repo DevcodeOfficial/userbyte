@@ -14,6 +14,6 @@ async def looogs(byte, message):
 		log.write(data)
 		key = requests.post('https://nekobin.com/api/documents', json={"content": data}).json().get('result').get('key')
 		url = f'https://nekobin.com/{key}'
-		await byte.send_document(chat_id=message.chat.id, document='userbyte_logs.txt', caption=f'😁 Here is Your Logs File\n [Click Here](url) to View on Nekobin')
+		await byte.send_document(chat_id=message.chat.id, document='userbyte_logs.txt', caption=f'😁 Here is Your Logs File\n [Click Here]({url}) to View on Nekobin')
 		await message.delete()
 		os.remove('userbyte_logs.txt')
