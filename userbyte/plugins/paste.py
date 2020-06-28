@@ -8,4 +8,4 @@ async def peste(byte, message):
 	replied = message.reply_to_message
 	if replied.document:
 		text = await byte.download_media(replied.document)
-		await byte.send_document(text)
+		await byte.send_document(chat_id=message.chat.id, document=text)
