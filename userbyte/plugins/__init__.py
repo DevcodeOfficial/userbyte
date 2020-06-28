@@ -29,7 +29,7 @@ from pyrogram import Filters, Message
 
 @byte.on_message(Filters.command("help", cmd) & Filters.me)
 async def _alive(byte, message):
-	if not message.command[1]:
+	if len(message.text) is 5:
 		ALL_MODULES = sorted(__list_all_modules())
 		await message.edit("**🤖🔥 UserByte Helper\n\n😊 Syntax :** `.help plugin name` **to know about a single plugin\n\nAvailable Plugins :** `{}`".format("`  **>**  `".join(a)))
 	else:
@@ -38,4 +38,4 @@ async def _alive(byte, message):
 		if result:
 			await message.edit(f"📄 Help For **{input}** Plugin :\n{result}")
 		else:
-			await message.edit(f"😐 There is No {input} Plugin")
+			await message.edit(f"😐 Invalid Plugin Name")
