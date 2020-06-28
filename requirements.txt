@@ -1,4 +1,5 @@
 requests
+gitpython
 https://github.com/pyrogram/pyrogram/archive/asyncio.zip
 tgcrypto
 asyncio
