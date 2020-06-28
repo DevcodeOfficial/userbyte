@@ -1,6 +1,8 @@
 from pyrogram import Filters
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
 from userbyte.helpers.admin import can_ban
+
+set_help('ban', '😈 **Ban Group Members \n\n👉 Command** : `.ban (id | username)`')
 
 @byte.on_message(Filters.command('ban', cmd) & Filters.me)
 async def ban_user(byte, message):
