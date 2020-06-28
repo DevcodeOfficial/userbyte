@@ -31,7 +31,7 @@ from pyrogram import Filters, Message
 async def _alive(byte, message):
 	if len(message.text) is 5:
 		ALL_MODULES = sorted(__list_all_modules())
-		await message.edit("**🤖🔥 UserByte Helper\n\n😊 Syntax :** `.help plugin name` **to know about a single plugin\n\nAvailable Plugins :** `{}`".format("`  **>**  `".join(a)))
+		await message.edit("**🤖🔥 UserByte Helper\n\n😊 Syntax :** `.help plugin name` **to know about a single plugin\n\nAvailable Plugins :** `{}`".format("`  **>**  `".join(ALL_MODULES)))
 	else:
 		input = message.command[1]
 		result = get_help(input)
