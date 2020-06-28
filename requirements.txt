@@ -6,4 +6,5 @@ aiohttp
 pySmartDL
 psycopg2-binary
 bs4
+heroku3
 sqlalchemy
