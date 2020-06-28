@@ -1,4 +1,5 @@
 from git import Repo
+from pyrogram import Filters
 from userbyte import byte, cmd
 
 @byte.on_message(Filters.command('update', cmd) & Filters.me)
