@@ -6,10 +6,10 @@
 #
 # All rights reserved.
 
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
 from pyrogram import Filters, Message
 
-
+set_help('alive', '😝 **This plugin is just for fun\n\n👉 Command :**  `.alive`')
 ALIVE = """░█─░█ █▀▀ █── █── █▀▀█ 
 ░█▀▀█ █▀▀ █── █── █──█ 
 ░█─░█ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀▀"""
