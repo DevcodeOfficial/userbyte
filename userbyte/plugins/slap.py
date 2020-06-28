@@ -73,7 +73,7 @@ async def slep(byte, message):
 		hits = random.choice(HIT)
 		item = random.choice(ITEMS)
 		throws = random.choice(THROW)
-		victim = '[{from_user.first_name}](tg://user?id={from_user.id})'
+		victim = f'[{from_user.first_name}](tg://user?id={from_user.id})'
 		
 		SLAP_TEMPLATES = [
 		    f"{hits} {victim} with a {item}.",
