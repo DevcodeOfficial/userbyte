@@ -1,6 +1,3 @@
-"""Update User / Bot code
-Syntax: .update"""
-
 import asyncio
 import os
 import git
@@ -41,7 +38,7 @@ RESTARTING_APP = "re-starting heroku application"
 
 @byte.on_message(Filters.command("update", cmd)
 async def updater(client, message):
-    status_message = await message.reply_text("🤔😳😳🙄")
+	status_message = await message.reply_text("🤔😳😳🙄")
     try:
         repo = git.Repo()
     except git.exc.InvalidGitRepositoryError as error_one:
