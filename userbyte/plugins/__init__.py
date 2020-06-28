@@ -36,6 +36,6 @@ async def _alive(byte, message):
 		input = message.command[1]
 		result = get_help(input)
 		if result:
-			await message.edit(f"📄 Help For **{input}** Plugin :\n{result}")
+			await message.edit(f"{result}")
 		else:
 			await message.edit(f"😐 Invalid Plugin Name")
