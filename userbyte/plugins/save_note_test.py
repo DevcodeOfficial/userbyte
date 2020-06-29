@@ -2,7 +2,7 @@ from pyrogram import Client, Filters, InlineKeyboardMarkup
 from userbyte import cmd, byte
 from userbyte.config import DB_URI
 from userbyte.helpers.admin import admin_check
-from userbyte.msg_types import get_note_type, Types
+from userbyte.helpers.msg_types import get_note_type, Types
 
 TG_URI = -100
 
