@@ -13,3 +13,5 @@ PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
 
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
+
+CHANNEL_ID = os.environ.get("CHANNEL_ID", None)
