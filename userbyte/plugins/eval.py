@@ -17,7 +17,9 @@ import io
 import pyrogram
 from pyrogram import Filters, Client
 from userbyte.helpers.deldog import haste, paste
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
+
+set_help('💻 **Run Python Code\n\n👉 Command :** `.eval [your code]`\n\n**👉Example :** `.eval await byte.send_poll(message.chat.id, "Userbyte is best ?", ["Yes", "No"])`')
 
 @byte.on_message(Filters.command(["eval"],cmd) & Filters.me)
 async def ev_al(client, message):
