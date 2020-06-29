@@ -15,6 +15,8 @@ timesleep = 1
 from datetime import datetime
 thumb_image_path = "./DOWNLOADS/thumb.jpg"
 
+set_help('upload', '⬆️ **Upload Files From Server\n\n👉 Command :** `.upload (file path | url)`\n\n👉 **Example :** `.upload ./DOWNLOADS/test.mp4`\n\n👉 **Example2 :** `.upload https://speed.hetzner.de/100MB.bin`')
+
 @byte.on_message(Filters.command(["upload"], cmd) & Filters.me)
 async def telegram_upload(client, message):
       msg = await message.edit("Processing ...")
