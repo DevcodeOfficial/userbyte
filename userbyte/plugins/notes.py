@@ -1,7 +1,6 @@
 from pyrogram import Client, Filters, InlineKeyboardMarkup
 from userbyte import cmd, byte
 from userbyte.config import DB_URI
-from userbyte.helpers.admin import admin_check
 from userbyte.helpers.msg_types import get_note_type, Types
 
 TG_URI = -1001436299899
@@ -11,10 +10,7 @@ if DB_URI is not None:
 
 @byte.on_message(Filters.command("save", cmd))
 async def save_note(client, message):
-	is_admin = await admin_check(message)
-	if not is_admin:
-	    return
-	await message.edit('`saving note...`')
+	await message.edit("`🤟 Saving Note......`")
 	if message.reply_to_message and message.reply_to_message.reply_markup is not None:
 	    fwded_mesg = await message.reply_to_message.forward(
 	        chat_id=TG_URI,
@@ -29,18 +25,18 @@ async def save_note(client, message):
 	        note_message_id
 	    )
 	    await message.edit(
-	        f"note <u>{note_name}</u> added"
+	        f"👍 Added **{note_name}** to notes.\nGet it with `.get {note_name}`, `#{note_name}`"
 	        # f"<a href='https://'>{message.chat.title}</a>"
 	    )
 	else:
 	    note_name, text, data_type, content, buttons = get_note_type(message, 2)
 	
 	    if data_type is None:
-	        await message.edit("🤔 maybe note text is empty")
+	        await message.edit("🙄 There Is No Note Text")
 	        return
 	
 	    if not note_name:
-	        await message.edit("no note name found")
+	        await message.edit("😕 There Is No Note Name")
 	        return
 	
 	    # construct message using the above parameters
@@ -79,8 +75,8 @@ async def save_note(client, message):
 	            note_message_id
 	        )
 	        await message.edit(
-	            f"note <u>{note_name}</u> added"
+	            f"👍 Added **{note_name}** to notes.\nGet it with `.get {note_name}`, `#{note_name}`"
 	            # f"<a href='https://'>{message.chat.title}</a>"
 	        )
 	    else:
-	        await message.edit("🥺 this might be an error 🤔")
+	        await message.edit("😖 Something Went Wrong")
