@@ -13,7 +13,9 @@ from importlib import import_module, reload
 from pathlib import Path
 from pyrogram import Client, Filters
 from pyrogram.client.handlers.handler import Handler
-from userbyte import logger, byte, cmd
+from userbyte import logger, byte, cmd, set_help
+
+set_help('core', '📲 **Install Plugins \n\n👉 Command :** `.install (reply to any plugin)`')
 
 @byte.on_message(Filters.command("install", cmd) & Filters.me)
 async def _core(byte, message):
