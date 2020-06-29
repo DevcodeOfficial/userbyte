@@ -9,11 +9,6 @@ from pyrogram import (
     InlineKeyboardButton
 )
 
-from userbyte import (
-    cmd
-)
-
-
 # NOTE: the url \ escape may cause double escapes
 # match * (bold) (don't escape if in url)
 # match _ (italics) (don't escape if in url)
@@ -45,7 +40,7 @@ def button_markdown_parser(msg: Message) -> (str, List):
     if markdown_note is None:
         return note_data, buttons
     #
-    if markdown_note.startswith(cmd):
+    if markdown_note.startswith('.'):
         args = markdown_note.split(None, 2)
         # use python's maxsplit to separate cmd and args
         markdown_note = args[2]
