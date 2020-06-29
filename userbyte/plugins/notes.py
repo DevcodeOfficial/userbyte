@@ -4,6 +4,7 @@ from userbyte.config import DB_URI
 from userbyte.helpers.msg_types import get_note_type, Types, get_file_id
 
 TG_URI = -1001436299899
+MAX_MESSAGE_LENGTH = 4096
 
 if DB_URI is not None:
     import userbyte.sql.notes as sql
@@ -129,3 +130,34 @@ async def get_note(_, message):
 async def get_hash_tag_note(_, message):
     note_name = message.matches[0].group(1)
     await get_note_with_command(message, note_name)
+    
+@byte.on_message(Filters.command("clear", cmd))
+async def clear_note(_, message):
+    await message.edit("`❌ Deleting....`")
+    note_name = " ".join(message.command[1:])
+    sql.rm_note(message.chat.id, note_name)
+    await message.edit(f"🗑 Note **{note_name}** Deleted !!")
+
+
+@byte.on_message(Filters.command("notes", cmd))
+async def list_note(_, message):
+    await message.edit("`Checking...`")
+
+    note_list = sql.get_all_chat_notes(message.chat.id)
+
+    msg = "📃 Notes in {}:\n".format("the current chat")
+    msg_p = msg
+
+    for note in note_list:
+        note_name = " - {}\n".format(note.name)
+        if len(msg) + len(note_name) > MAX_MESSAGE_LENGTH:
+            await message.reply_text(msg)
+            msg = ""
+        msg += note_name
+
+    if msg == msg_p:
+        await message.edit("⛔️ There's no note in this chat")
+
+    elif len(msg) != 0:
+        await message.reply_text(msg)
+        await message.delete()
