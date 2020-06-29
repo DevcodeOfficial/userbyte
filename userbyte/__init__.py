@@ -31,6 +31,4 @@ def set_help(plugin_name, help_text):
 	cmd_help.set(plugin_name, help_text)
 	cmd_help.dump
 
-LOGGER_GROUP = PRIVATE_GROUP_ID
-LOG = True
 cmd = [".","!","$"]
