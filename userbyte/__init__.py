@@ -33,4 +33,4 @@ def set_help(plugin_name, help_text):
 
 LOGGER_GROUP = PRIVATE_GROUP_ID
 LOG = True
-cmd = [".","!","#","$"]
+cmd = ["."!","$"]
