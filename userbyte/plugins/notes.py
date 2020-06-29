@@ -2,6 +2,7 @@ from pyrogram import Client, Filters, InlineKeyboardMarkup
 from userbyte import cmd, byte
 from userbyte.config import DB_URI
 from userbyte.helpers.msg_types import get_note_type, Types, get_file_id
+import os
 
 TG_URI = os.environ.get("CHANNEL_ID", None)
 MAX_MESSAGE_LENGTH = 4096
