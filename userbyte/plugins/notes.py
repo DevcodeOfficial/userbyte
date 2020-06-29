@@ -77,7 +77,7 @@ async def save_note(client, message):
 	            note_message_id
 	        )
 	        await message.edit(
-	            f"👍 Added **{note_name}** to notes.\nGet it with `.get {note_name}`, `#{note_name}`"
+	            f"👍 Added **{note_name}** to notes.\nGet it with `.get {note_name}`  |  `#{note_name}`"
 	            # f"<a href='https://'>{message.chat.title}</a>"
 	        )
 	    else:
