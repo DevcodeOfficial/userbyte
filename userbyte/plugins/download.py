@@ -11,8 +11,10 @@ from pySmartDL import SmartDL
 from pyrogram import Client, Filters
 from datetime import datetime
 DOWNLOAD_LOCATION= "./DOWNLOADS/"
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
 from userbyte.helpers.loader import progress_for_pyrogram, humanbytes
+
+set_help('download', '⬇️ **Download Files To Server\n👉 Command :** `.download (url | reply to telegram media)`\n\n👉 **Example :** `.download https://speed.hetzner.de/100MB.bin`')
 
 @byte.on_message(Filters.command(["download"], cmd) & Filters.me)
 async def download_telegram(client, message):
