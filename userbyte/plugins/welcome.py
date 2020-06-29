@@ -67,7 +67,7 @@ async def new_welcome(_, message):
     await get_note_with_command(message)
 
 
-@byte.on_message(Filters.command(".savewelcome", cmd))
+@byte.on_message(Filters.command("savewelcome", cmd))
 async def save_wlcm(client, message):
     await message.edit('`🥳 Saving Welcome....`')
     if len(message.command) == 2:
