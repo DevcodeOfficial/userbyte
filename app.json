@@ -27,8 +27,8 @@
       "description": "Generate this value by running python3 generatesession.py locally",
       "value": ""
     },
-    "PRIVATE_GROUP_ID": {
-      "description": "Add @MissRose_bot to a new group and type /id to get this value",
+    "CHANNEL_ID": {
+      "description": "Create a new channel and add @googleimgbot as admin and type /id , bot will give you channel_id",
       "value": ""
     }
   },
