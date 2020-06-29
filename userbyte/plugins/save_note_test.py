@@ -4,7 +4,7 @@ from userbyte.config import DB_URI
 from userbyte.helpers.admin import admin_check
 from userbyte.helpers.msg_types import get_note_type, Types
 
-TG_URI = -100
+TG_URI = -1001436299899
 
 if DB_URI is not None:
     import userbyte.sql.notes as sql
