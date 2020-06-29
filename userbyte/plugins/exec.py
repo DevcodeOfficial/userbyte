@@ -8,8 +8,6 @@
 
 # ♥️ to Hasibul Kobir
 
-set_help('exec', '💻 **Run Shell Commands \n\n👉 Command :** `.exec [shell cmds]`\n\n👉 **Example :** `.exec echo UserByte Is Best `')
-
 import pyrogram
 from pyrogram import Filters, Client
 import io
@@ -17,8 +15,9 @@ import asyncio
 import time
 import subprocess
 from userbyte.helpers.deldog import haste
-from userbyte import byte, cmd
+from userbyte import byte, cmd, set_help
 
+set_help('exec', '💻 **Run Shell Commands \n\n👉 Command :** `.exec [shell cmds]`\n\n👉 **Example :** `.exec echo UserByte Is Best `')
 
 @byte.on_message(Filters.command(["exec"], cmd) & Filters.me)
 async def ex_ec(client, message):
