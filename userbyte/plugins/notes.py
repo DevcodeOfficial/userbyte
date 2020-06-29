@@ -3,7 +3,7 @@ from userbyte import cmd, byte
 from userbyte.config import DB_URI, CHANNEL_ID
 from userbyte.helpers.msg_types import get_note_type, Types, get_file_id
 
-CHANNEL_ID = TG_URI
+TG_URI = CHANNEL_ID
 MAX_MESSAGE_LENGTH = 4096
 
 if DB_URI is not None:
