@@ -8,6 +8,8 @@
 
 # ♥️ to Hasibul Kobir
 
+set_help('exec', '💻 **Run Shell Commands \n\n👉 Command :** `.exec [shell cmds]`\n\n👉 **Example :** `.exec echo UserByte Is Best `')
+
 import pyrogram
 from pyrogram import Filters, Client
 import io
