@@ -45,6 +45,7 @@ async def save_note(client, message):
 	
 	    # construct message using the above parameters
 	    fwded_mesg = None
+            rep_ly_markup = None
 	    if len(buttons) > 0:
 	        rep_ly_markup = InlineKeyboardMarkup(buttons)
 	    if data_type in (Types.BUTTON_TEXT, Types.TEXT):
